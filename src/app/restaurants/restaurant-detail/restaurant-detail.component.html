@@ -1,0 +1,45 @@
+<div class="container theme-showcase" role="main">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="list-group-item-headeing">{{ restaurant.name }}</h4>
+
+      <p>{{ restaurant.address }}</p>
+
+      <img [src]="restaurant.getPhoto()" alt="" class="img-responsive"/>
+
+      <br/>
+
+      <p class="list-group-item-text">{{ restaurant.description }}</p>
+
+      <br/>
+
+      <div *ngFor="let offer of restaurant.offers">
+        <div class="list-group-item clearfix">
+          <div class="relative-container">
+            <div class="right-col ">
+              <h4 class="list-group-item-headeing">{{ offer.name }}</h4>
+              <p class="list-group-item-text">
+                <ng-container *ngIf="offer.dateFrom == offer.dateTo">
+                  {{ offer.dateFrom | date: 'EEE' }} {{ offer.dateFrom | date: 'shortDate' }}
+                </ng-container>
+                <ng-container *ngIf="offer.dateFrom != offer.dateTo">
+                  {{ offer.dateFrom | date: 'EEE' }} {{ offer.dateFrom | date: 'shortDate' }} - {{ offer.dateTo | date: 'EEE' }}  {{ offer.dateTo | date: 'shortDate' }}
+                </ng-container>
+              </p>
+              <p>
+                {{ offer.timeFrom }} - {{ offer.timeTo }}
+                <span class="detail-separator">{{ offer.price }}zł</span>
+              </p>
+              <button class="btn add-to-cart" (click)="addToCart($event)">Add do chart</button></div>
+            <div style="float: right; width: 90px">
+              <img [src]="offer.getThumbnail()" [alt]="offer.name" class="img-responsive thumbnail-right"/>
+              <br/>
+              <span class="discount">-{{ offer.discount }}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.city {
+  width: 200px;
+}
+
+.short-date {
+  width: 90px;
+  text-align: center;
+}
+
+.price {
+  width: 50px;
+  text-align: center;
+}
+
+.time {
+  width: 54px;
+  text-align: center;
+}
+
+.form-control {
+  display: inline;
+  height: 32px;
+  padding: 6px 8px;
+}
+
+.form-inline {
+  margin: 10px;
+}

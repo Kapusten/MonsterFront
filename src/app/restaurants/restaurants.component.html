@@ -1,0 +1,49 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #close><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Search criteria</h4>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
+          <div class="form-inline">
+            <label for="city">City</label>
+            <select id="city" class="form-control city" formControlName="city">
+              <option value="warsaw">Warsaw</option>
+              <option value="cracow">Cracow</option>
+            </select>
+          </div>
+
+          <div class="form-inline">
+            <label for="price-from">Price from</label>
+            <input id="price-from" class="form-control price" formControlName="priceFrom">
+            <label for="price-to">to</label>
+            <input id="price-to" class="form-control price" formControlName="priceTo">
+          </div>
+
+          <div class="form-inline">
+            <label for="date-from">Date from</label>
+            <input id="date-from" class="form-control short-date" formControlName="dateFrom">
+            <label for="date-to">to</label>
+            <input id="date-to" class="form-control short-date" formControlName="dateTo">
+          </div>
+
+          <div class="form-inline" >
+            <label for="time-from">Time from</label>
+            <input id="time-from" class="form-control time" formControlName="timeFrom">
+            <label for="time-to">to</label>
+            <input id="time-to" class="form-control time" formControlName="timeTo">
+          </div>
+
+          <div class="form-group">
+            <button>Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

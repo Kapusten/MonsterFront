@@ -1,0 +1,10 @@
+<a [routerLink]="[restaurant.id]" class="list-group-item clearfix" *ngIf="restaurant.offers.length > 0">
+  <div class="pull-left">
+    <h4 class="list-group-item-headeing">{{ restaurant.name }}</h4>
+    <p class="list-group-item-text">{{ restaurant.address }}</p>
+  </div>
+  <span class="pull-right right-side">
+    <img [src]="restaurant.getThumbnail()" [alt]="restaurant.name" class="img-responsive"/>
+    <span class="discount">-{{ restaurant.getHighestDiscount() }}% </span>
+  </span>
+</a>

@@ -1,0 +1,11 @@
+.right-side img {
+  display: inline;
+}
+
+.discount {
+  color: #e74c3c;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+}

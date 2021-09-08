@@ -1,0 +1,7 @@
+a {
+   outline: 0;
+}
+
+div[role=main] {
+  margin-top: 65px;
+}

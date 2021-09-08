@@ -1,0 +1,20 @@
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [disableDefaultUI]=true
+  [streetViewControl]=false
+  [zoom]="zoom"
+  (mapReady)="mapIsReady($event)">
+  <agm-marker *ngFor="let marker of restaurants"
+    [latitude]="marker.lat"
+    [longitude]="marker.lng">
+    <agm-info-window>
+      <a [routerLink]="['/restaurants', marker.id]">{{ marker.name }}</a>
+    </agm-info-window>
+  </agm-marker>
+  <div id="my-location-container">
+    <button id="my-location-button" title="Your Location">
+      <div id="my-location-icon"></div>
+    </button>
+  </div>
+</agm-map>

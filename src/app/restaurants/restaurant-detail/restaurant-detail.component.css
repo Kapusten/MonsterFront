@@ -1,0 +1,32 @@
+.add-to-cart {
+  padding: 2px 6px;
+}
+
+.right-side img, .right-side button {
+  display: inline;
+}
+
+.discount {
+  color: #e74c3c;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+}
+
+.detail-separator {
+  padding: 4px;
+}
+
+.relative-container {
+  position: relative;
+}
+
+.right-col {
+  width: calc(100% - 90px);
+  float: left
+}
+
+.thumbnail-right {
+  float: right;
+}
